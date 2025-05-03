@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App with Ads</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Login Section -->
+        <div id="login-section" class="section active">
+            <h1>Welcome to Chat App</h1>
+            <div class="form-group">
+                <input type="text" id="username-input" placeholder="Choose a username" maxlength="20">
+                <button id="login-btn">Start Chatting</button>
+            </div>
+            <div class="ad-container">
+                <h3>Sponsored</h3>
+                <script async="async" data-cfasync="false" src="//pl26322452.profitableratecpm.com/a9ffdfc9131646e059fd1f1dba2030ba/invoke.js"></script>
+                <div id="container-a9ffdfc9131646e059fd1f1dba2030ba"></div>
+            </div>
+        </div>
+
+        <!-- Main App Section -->
+        <div id="app-section" class="section">
+            <header>
+                <div class="user-info">
+                    <span id="current-username"></span>
+                    <span id="account-type"></span>
+                    <span id="days-remaining"></span>
+                </div>
+                <button id="logout-btn">Logout</button>
+            </header>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="find-user">Find User</button>
+                <button class="tab-btn" data-tab="random-chat">Random Chat</button>
+                <button class="tab-btn" data-tab="premium">Go Premium</button>
+            </div>
+
+            <!-- Find User Tab -->
+            <div id="find-user" class="tab-content active">
+                <div class="form-group">
+                    <input type="text" id="search-username" placeholder="Enter username to find">
+                    <button id="search-btn">Search</button>
+                </div>
+                <div id="search-results"></div>
+            </div>
+
+            <!-- Random Chat Tab -->
+            <div id="random-chat" class="tab-content">
+                <p>Get matched with a random user for chatting</p>
+                <button id="start-random-chat" disabled>Start Random Chat</button>
+                <p id="random-chat-status">Loading random chat availability...</p>
+            </div>
+
+            <!-- Premium Tab -->
+            <div id="premium" class="tab-content">
+                <div class="premium-info">
+                    <h3>Upgrade to Premium</h3>
+                    <p>Your current points: <span id="current-points">0</span></p>
+                    <p>Watch ads to earn points and keep your username permanently!</p>
+                    
+                    <div class="premium-options">
+                        <div class="option">
+                            <h4>1 Day Premium</h4>
+                            <p>10 points</p>
+                            <button class="buy-btn" data-days="1" data-points="10">Buy</button>
+                        </div>
+                        <div class="option">
+                            <h4>7 Days Premium</h4>
+                            <p>50 points</p>
+                            <button class="buy-btn" data-days="7" data-points="50">Buy</button>
+                        </div>
+                        <div class="option">
+                            <h4>30 Days Premium</h4>
+                            <p>150 points</p>
+                            <button class="buy-btn" data-days="30" data-points="150">Buy</button>
+                        </div>
+                    </div>
+                    
+                    <button id="watch-ad-btn">Watch Ad to Earn Points</button>
+                </div>
+                
+                <div class="ad-container">
+                    <h3>Sponsored</h3>
+                    <script type='text/javascript' src='//pl26322567.profitableratecpm.com/a7/94/3c/a7943c43c5d35abd517cb683d80ae813.js'></script>
+                </div>
+            </div>
+
+            <!-- Chat Section (hidden by default) -->
+            <div id="chat-section" class="hidden">
+                <div class="chat-header">
+                    <h3>Chat with <span id="peer-username"></span></h3>
+                    <button id="end-chat-btn">End Chat</button>
+                </div>
+                <div id="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="Type your message...">
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Banner Ad -->
+    <div class="ad-container banner-ad">
+        <h3>Sponsored</h3>
+        <script type="text/javascript">
+            atOptions = {
+                'key': 'd22f0b1b0cc7d7b775a384b7dd7a1174',
+                'format': 'iframe',
+                'height': 250,
+                'width': 300,
+                'params': {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/d22f0b1b0cc7d7b775a384b7dd7a1174/invoke.js"></script>
+    </div>
+
+    <!-- Popunder Ad (will load automatically) -->
+    <script type='text/javascript' src='//pl26322564.profitableratecpm.com/3d/fa/0c/3dfa0c5e3cb84133dc6ac0876a2baff4.js'></script>
+
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
